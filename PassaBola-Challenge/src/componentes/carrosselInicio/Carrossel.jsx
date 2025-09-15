@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "./HeaderHome";
 import TituloSubtitulo from "./TituloSubtitulo";
 import { useState } from "react";
 
