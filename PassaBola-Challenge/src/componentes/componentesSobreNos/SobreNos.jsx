@@ -37,7 +37,7 @@ export default function SobreNos() {
                     A Passa a Bola nasceu da paixão pelo futebol e da percepção da necessidade de profissionalizar a gestão do esporte amador, tornando-o mais acessível, divertido e organizado para todos. Somos o elo que conecta a paixão pela bola com a tecnologia, garantindo que a única preocupação em campo seja o jogo em si.
                 </p>
 
-                <div className="my-35 ml-185 mr-5">
+                <div className="my-35 ml-185 mr-5 duration-700 hover:scale-105">
                     <img src={fotoMeninas} alt={fotoMeninas} className="w-[500px] min-w-[300px] h-auto shrink-0"/>
                 </div>
             </div>
