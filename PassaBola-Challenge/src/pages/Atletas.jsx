@@ -1,20 +1,15 @@
 import CardAtleta from "../componentes/componentesAtletas/CardAtleta";
-import Header from "../componentes/Header";
 import Titulo from "../componentes/Titulo";
 import fotoJogadora from "../assets/imagemjogadora.png"
 import fotoJogadora2 from "../assets/imagemjogadora2.jpg"
 import fotoJogadora3 from "../assets/imagemjogadora3.jpg"
 import fotoJogadora4 from "../assets/imagemjogadora4.jpg"
-import Footer from "../componentes/Footer";
-import { useState } from "react";
 
 export default function Atletas() {
 
-    const [menuAberto, setMenuAberto] = useState(false);
-
     return (
         <>
-            <Header menuAberto={menuAberto} setMenuAberto={setMenuAberto} />
+            
             <Titulo
                 title="Atletas Destaque"
                 position="start"
@@ -54,7 +49,6 @@ export default function Atletas() {
                     clube="Time D"
                 />
             </div>
-            <Footer />
         </>
     )
 }
