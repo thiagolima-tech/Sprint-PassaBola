@@ -38,19 +38,21 @@ export default function Jogos() {
     });
 
   return (
-    <div>
-      <div className="ml-4">
-        <img className="w-20" src={copasVerde} alt="" />
-        <h1 className="text-[#300B74] text-[50px] font-Jockey">
+    <div className="flex flex-col gap-4 ">
+      <div className="ml-4 md:ml-14">
+        <img className="w-20 md:w-[100px]" src={copasVerde} alt="" />
+        <h1 className="text-[#300B74] text-[50px] font-Jockey md:text-[100px]">
           COPA PASSA A BOLA
         </h1>
-        <hr className="w-[390px] border-[#300B74]" />
-        <h2 className="text-[#300B74] text-[30px] mt-5 font-Jockey">Grupo</h2>
+        <hr className="w-[390px] border-[#300B74] md:w-[90%]" />
+        <h2 className="text-[#300B74] text-[30px] mt-5 font-Jockey md:mt-16 md:mb-4">
+          Grupo
+        </h2>
       </div>
-      <div className="overflow-x-auto m-2 mb-8">
+      <div className="overflow-x-auto m-2 mb-8 md:w-[70%] md:ml-12">
         <table className="text-[16px] min-w-full border-collapse">
           <TabelaHead />
-          <tbody className="font-Jockey text-[#19063C] text-sm text-[20px]">
+          <tbody className="font-Jockey text-[#19063C] text-sm text-[20px] ">
             {timesOrdenados.map((time, index) => (
               <TabelaBody
                 key={time.time}
