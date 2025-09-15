@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+/* Tira a barra de scroll horizontal */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+
+@theme {
+    --font-Jockey: "Jockey One", sans-serif;
+    --font-Raleway: "Raleway", sans-serif;
+    --font-Rambla: "Rambla", sans-serif;
+}
