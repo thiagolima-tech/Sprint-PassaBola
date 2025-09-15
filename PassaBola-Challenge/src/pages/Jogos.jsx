@@ -1,6 +1,7 @@
 import copasVerde from "../assets/copas-verde.png";
 import TabelaHead from "../components/TableGames/TabelaHead";
 import TabelaBody from "../components/TableGames/TabelaBody";
+import Documentos from "../components/Documentos/Documentos";
 
 export default function Jogos() {
   const times = [
@@ -46,7 +47,7 @@ export default function Jogos() {
         <hr className="w-[390px] border-[#300B74]" />
         <h2 className="text-[#300B74] text-[30px] mt-5 font-Jockey">Grupo</h2>
       </div>
-      <div className="overflow-x-auto m-2">
+      <div className="overflow-x-auto m-2 mb-8">
         <table className="text-[16px] min-w-full border-collapse">
           <TabelaHead />
           <tbody className="font-Jockey text-[#19063C] text-sm text-[20px]">
@@ -69,7 +70,7 @@ export default function Jogos() {
           </tbody>
         </table>
       </div>
-      <div></div>
+      <Documentos />
     </div>
   );
 }

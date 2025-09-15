@@ -22,7 +22,7 @@ export default function TabelaBody({
           zIndex: 10,
         }}
       >
-        <div className="flex justify-between mr-2">
+        <div className="flex justify-between mr-4">
           <p>{posicao + 1}</p>
           <p>{time}</p>
         </div>
