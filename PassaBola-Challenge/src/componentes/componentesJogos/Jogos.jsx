@@ -14,7 +14,7 @@ export default function Jogos() {
                         position="center"
                         color="#f8f8f8"
                     />
-                    <div className="flex flex-col lg:flex-row justify-around">
+                    <div className="flex flex-col lg:flex-row justify-between">
                         <CardJogos
                             image={jogo1}
                             text="Este sábado"
