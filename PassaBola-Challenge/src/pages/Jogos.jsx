@@ -1,7 +1,8 @@
 import copasVerde from "../assets/copas-verde.png";
-import TabelaHead from "../components/TableGames/TabelaHead";
-import TabelaBody from "../components/TableGames/TabelaBody";
-import Documentos from "../components/Documentos/Documentos";
+import TabelaHead from "../componentes/TableGames/TabelaHead";
+import TabelaBody from "../componentes/TableGames/TabelaBody";
+import DocumentosCopa from "../componentes/componentesCampeonatos/DocumentosCopa";
+import Patrocinadores from "../componentes/Patrocinadores";
 
 export default function Jogos() {
   const times = [
@@ -38,13 +39,13 @@ export default function Jogos() {
     });
 
   return (
-    <div className="flex flex-col gap-4 ">
+    <div className="flex flex-col gap-4 my-20">
       <div className="ml-4 md:ml-14">
         <img className="w-20 md:w-[100px]" src={copasVerde} alt="" />
         <h1 className="text-[#300B74] text-[50px] font-Jockey md:text-[100px]">
           COPA PASSA A BOLA
         </h1>
-        <hr className="w-[390px] border-[#300B74] md:w-[90%]" />
+        <div className="mr-8 h-0.5 bg-[#300B74] flex md:h-0.5" />
         <h2 className="text-[#300B74] text-[30px] mt-5 font-Jockey md:mt-16 md:mb-4">
           Grupo
         </h2>
@@ -72,7 +73,12 @@ export default function Jogos() {
           </tbody>
         </table>
       </div>
-      <Documentos />
+      <section className="my-10 mb-20">
+        <DocumentosCopa />
+      </section>
+      <section>
+        <Patrocinadores />
+      </section>
     </div>
   );
 }
