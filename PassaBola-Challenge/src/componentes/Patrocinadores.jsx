@@ -1,21 +1,29 @@
 import Titulo from "./Titulo";
-import logoAdidas from "../assets/adidas.png"
-import logoGE from "../assets/ge.png"
-import logoBrasa from "../assets/brasa.png"
+import logoAdidas from "../assets/adidas.png";
+import logoGE from "../assets/ge.png";
+import logoBrasa from "../assets/brasa.png";
 
-export default function Patrocinadores(){
-    return (
-        <section className="h-180 sm:h-120 md:h-85 lg:h-180 xl:h-110">
-            <Titulo
-            title="Patrocinadores"
-            position="start"
-            color="#300B74"
-            />
-            <div className="gap-8 flex justify-center flex-wrap lg:gap-30 ">
-                <img src={logoAdidas} alt="Adidas" className="w-50 lg:w-70 duration-300 hover:scale-105"/>
-                <img src={logoGE} alt="GE" className="w-50 lg:w-70 duration-300 hover:scale-105"/>
-                <img src={logoBrasa} alt="Brasa" className="w-50 lg:w-90 duration-300 hover:scale-105"/>
-            </div>
-        </section>
-    )
+export default function Patrocinadores() {
+  return (
+    <section>
+      <Titulo title="Patrocinadores" position="start" color="#300B74" />
+      <div className="gap-8 flex justify-center flex-wrap lg:gap-30 ">
+        <img
+          src={logoAdidas}
+          alt="Adidas"
+          className="w-50 lg:w-70 duration-300 hover:scale-105"
+        />
+        <img
+          src={logoGE}
+          alt="GE"
+          className="w-50 lg:w-70 duration-300 hover:scale-105"
+        />
+        <img
+          src={logoBrasa}
+          alt="Brasa"
+          className="w-50 lg:w-90 duration-300 hover:scale-105"
+        />
+      </div>
+    </section>
+  );
 }
