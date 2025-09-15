@@ -1,12 +1,8 @@
-import Cadastro from "./pages/Cadastro.jsx";
-import Login from "./pages/Login.jsx";
+import "./App.css";
+import Jogos from "./pages/Jogos";
 
 function App() {
-  return (
-    <>
-      <Login />
-    </>
-  );
+  return <Jogos />;
 }
 
 export default App;
