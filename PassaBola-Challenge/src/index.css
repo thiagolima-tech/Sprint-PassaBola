@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme {
+  --font-Jockey: "Jockey One", sans-serif;
+  --font-Raleway: "Raleway", sans-serif;
+}

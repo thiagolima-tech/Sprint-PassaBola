@@ -1,7 +1,8 @@
-import './App.css'
+import "./App.css";
+import Jogos from "./pages/Jogos";
 
 function App() {
-  return
+  return <Jogos />;
 }
 
-export default App
+export default App;
