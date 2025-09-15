@@ -56,7 +56,7 @@ export default function Jogos() {
           <tbody className="font-Jockey text-[#19063C] text-sm text-[20px] ">
             {timesOrdenados.map((time, index) => (
               <TabelaBody
-                key={time.time}
+                key={index}
                 cor={index % 2 === 0 ? "#D9D9D9" : "#FFFFFF"}
                 posicao={index}
                 time={time.time}
