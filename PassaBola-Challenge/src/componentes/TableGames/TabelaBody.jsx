@@ -19,7 +19,7 @@ export default function TabelaBody({
           width: "140px",
           minWidth: "140px",
           backgroundColor: cor,
-          zIndex: 10,
+          zIndex: 1,
         }}
       >
         <div className="flex justify-between mr-4">

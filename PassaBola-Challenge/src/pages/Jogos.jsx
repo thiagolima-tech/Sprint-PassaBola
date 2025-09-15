@@ -39,7 +39,7 @@ export default function Jogos() {
     });
 
   return (
-    <div className="flex flex-col gap-4 my-20">
+    <div className="flex flex-col gap-4 my-30 mb-40">
       <div className="ml-4 md:ml-14">
         <img className="w-20 md:w-[100px]" src={copasVerde} alt="" />
         <h1 className="text-[#300B74] text-[50px] font-Jockey md:text-[100px]">
@@ -76,9 +76,7 @@ export default function Jogos() {
       <section className="my-10 mb-20">
         <DocumentosCopa />
       </section>
-      <section>
-        <Patrocinadores />
-      </section>
+      <Patrocinadores />
     </div>
   );
 }

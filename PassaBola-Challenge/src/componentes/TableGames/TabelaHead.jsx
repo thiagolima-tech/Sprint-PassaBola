@@ -2,7 +2,7 @@ export default function TabelaHead() {
   return (
     <thead className="text-gray-500">
       <tr>
-        <th className="text-left sticky left-0 bg-white z-10 font-Raleway">
+        <th className="text-left sticky left-0 bg-white z-1 font-Raleway">
           Classificação
         </th>
         <th className="px-4 py-2">PTS</th>
