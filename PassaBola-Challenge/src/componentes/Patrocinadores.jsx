@@ -5,7 +5,7 @@ import logoBrasa from "../assets/brasa.png"
 
 export default function Patrocinadores(){
     return (
-        <section className="h-120 md:h-85 lg:h-110">
+        <section className="h-180 sm:h-120 md:h-85 lg:h-180 xl:h-110">
             <Titulo
             title="Patrocinadores"
             position="start"
