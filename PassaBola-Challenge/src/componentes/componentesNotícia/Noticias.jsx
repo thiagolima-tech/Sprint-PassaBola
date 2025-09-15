@@ -14,9 +14,7 @@ export default function Noticias() {
                     position="start"
                     color="#300B74"
                 />
-                <div className="flex overflow-x-auto gap-6 px-4
-                snap-x snap-mandatory touch-pan-x snap-end no-scrollbar
-                ">
+                <div className="flex border-red-900 border-2 overflow-x-auto gap-6 px-4">
                     <CardNoticia
                         image={fotoMarta}
                         title="Marta"
