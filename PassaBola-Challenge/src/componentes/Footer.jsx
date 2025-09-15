@@ -60,14 +60,14 @@ export default function Footer() {
                     <p className="mt-3 text-white/80">
                         Receba gols, resultados e destaques no seu e-mail.
                     </p>
-                    <form className="mt-4 flex gap-2">
+                    <form className="mt-4 flex flex-col gap-2">
                         <input
                             type="email"
                             required
                             placeholder="Seu e-mail"
                             className="flex-1 rounded-md px-2 py-2 bg-white/10 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
                         />
-                        <button className="rounded-md px-2 py-2 md:text-[12px] bg-white text-[#540FD4] font-semibold hover:bg-white/90">
+                        <button className="w-3/6 rounded-md px-2 py-2 md:text-[12px] bg-white text-[#540FD4] font-semibold hover:bg-white/90">
                             Assinar
                         </button>
                     </form>
