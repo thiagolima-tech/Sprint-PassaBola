@@ -1,8 +1,11 @@
-import "./App.css";
-import Jogos from "./pages/Jogos";
+import Home from "./pages/Home";
 
 function App() {
-  return <Jogos />;
+  return (
+    <>
+      <Home />
+    </>
+  );
 }
 
 export default App;
