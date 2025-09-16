@@ -1,9 +1,9 @@
 import CardAtleta from "../componentes/componentesAtletas/CardAtleta.jsx";
 import Titulo from "../componentes/Titulo.jsx";
-import fotojogadora from "../assets/imagemjogadora.png"
-import fotojogadora2 from "../assets/imagemjogadora2.jpg"
-import fotojogadora3 from "../assets/imagemjogadora3.jpg"
-import fotojogadora4 from "../assets/imagemjogadora4.jpg"
+import imagemJogadora from "../assets/imagemJogadora.png"
+import imagemJogadora2 from "../assets/imagemJogadora2.jpg"
+import imagemJogadora3 from "../assets/imagemJogadora3.jpg"
+import imagemJogadora4 from "../assets/imagemJogadora4.jpg"
 
 export default function Atletas() {
 
@@ -17,7 +17,7 @@ export default function Atletas() {
             />
             <div className="m-10">
                 <CardAtleta
-                    image={fotojogadora}
+                    image={imagemJogadora}
                     nome="Camila Dantas"
                     idade="22"
                     posicao="Volante"
@@ -25,7 +25,7 @@ export default function Atletas() {
                     clube="Time A"
                 />
                 <CardAtleta
-                    image={fotojogadora2}
+                    image={imagemJogadora2}
                     nome="Alexia Putellas"
                     idade="28"
                     posicao="Meia"
@@ -33,7 +33,7 @@ export default function Atletas() {
                     clube="Time B"
                 />
                 <CardAtleta
-                    image={fotojogadora3}
+                    image={imagemJogadora3}
                     nome="Debinha"
                     idade="27"
                     posicao="Atacante"
@@ -41,7 +41,7 @@ export default function Atletas() {
                     clube="Time C"
                 />
                 <CardAtleta
-                    image={fotojogadora4}
+                    image={imagemJogadora4}
                     nome="Racheal Kundananji"
                     idade="23"
                     posicao="Atacante"
