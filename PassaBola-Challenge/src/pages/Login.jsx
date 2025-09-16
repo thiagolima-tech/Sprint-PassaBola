@@ -21,14 +21,12 @@ export default function Login() {
   const [senha, setSenha] = useState('');
   const [mensagem, setMensagem] = useState('');
 
-  const handleLogin = (event) => {
-    event.preventDefault();
-
-    // Validação simples
+  const handleLogin = (email, senha) => {
 
     try {
       const storedData = localStorage.getItem('userData');
       const userData = storedData ? JSON.parse(storedData) : null;
+      console.log(userData)
 
       if (userData && userData.email === email && userData.senha === senha) {
         setMensagem('✅ Login bem-sucedido!');
@@ -60,13 +58,13 @@ export default function Login() {
             campo="Email" 
             type="input" 
             value={email}
-            onChange={(e) => setEmail(e.targert.value)}
+            change={(e) => setEmail(e.target.value)}
           />
           <InfoUsers 
             campo="Senha" 
             type="input"
             value={senha}
-            onChange={(e) => setSenha(e.targert.value)}
+            change={(e) => setSenha(e.target.value)}
           />
         </div>
 
@@ -74,7 +72,7 @@ export default function Login() {
           <p className="mt-2 text-sm text-center text-gray-700">{mensagem}</p>
         )}
 
-        <Acesso btn1="CADASTRAR" route1="/cadastro" btn2="ACESSAR" route2="/" handleLogin={handleLogin} />
+        <Acesso btn1="CADASTRAR" route1="/cadastro" btn2="ACESSAR" route2="/" handle={() => handleLogin(email, senha)} />
       </div>
     </div>
   );
