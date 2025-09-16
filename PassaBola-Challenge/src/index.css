@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* cross-browser: oculta a barra de rolagem horizontal/vertical */
+.no-scroll {
+  -ms-overflow-style: none;   /* IE/Edge */
+  scrollbar-width: none;      /* Firefox */
+}
+.no-scroll::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+
 @theme {
   --font-Jockey: "Jockey One", sans-serif;
   --font-Raleway: "Raleway", sans-serif;
