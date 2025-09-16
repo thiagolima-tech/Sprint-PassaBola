@@ -2,12 +2,31 @@ import anuncio from "../../assets/imagemAnuncioCopa.png";
 import CardNoticia from "../componentesNotícia/CardNoticia";
 import DocumentosCopa from "./DocumentosCopa";
 import Titulo from "../Titulo";
-import fotoMarta from "../../assets/imagemMarta.png";
-import fotoLieke from "../../assets/imagemLieke.png";
-import fotoChampionsLeague from "../../assets/imagemChampionsLeague.png";
-import fotoBola from "../../assets/imagemBolaGol.webp";
+import { useEffect, useState } from "react";
 
 export default function CampeonatosAtuais() {
+
+  const [news, setNews] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    let alive = true;
+
+    fetch('https://68c98d52ceef5a150f654bb1.mockapi.io/passaBola/v1/news', {
+      method: 'GET'
+    })
+      .then((r) => {
+        if (!r.ok) throw new Error("Falha ao buscar notícias");
+        return r.json();
+      })
+      .then((json) => { if (alive) setNews(json); })
+      .catch((e) => { if (alive) setError(e); })
+      .finally(() => { if (alive) setLoading(false); });
+
+    return () => { alive = false; };
+  }, [])
+
   return (
     <section>
       <Titulo title="Campeonatos Atuais" position="start" color="#300B74" />
@@ -25,40 +44,16 @@ export default function CampeonatosAtuais() {
         color="#300B74"
       />
       <div
-        className="flex overflow-x-auto gap-6 px-10 pb-6
-                            snap-x snap-mandatory touch-pan-x snap-end no-scrollbar
-                            "
+        className="flex overflow-x-auto gap-6 mb-2 px-10 no-scroll"
       >
-        <CardNoticia
-          image={fotoBola}
-          title="TV Brasil exibe jogos de volta do mata-mata do Brasileirão Feminino"
-          text="Neste fim de semana, a TV Brasil exibe dois jogos de volta do mata-mata do Campeonato Brasileiro Feminino de Futebol – Série A3."
-        />
-        <CardNoticia
-          image={fotoLieke}
-          title="Lieke Martens"
-          text="Ex-melhor do mundo anuncia sua aposentadoria aos 32 anos"
-        />
-        <CardNoticia
-          image={fotoChampionsLeague}
-          title="Champions League Feminina"
-          text="Champions League Feminina 2025/26: Real Madrid fica muito perto da fase de liga"
-        />
-        <CardNoticia
-          image={fotoMarta}
-          title="Marta"
-          text='Marcou dois golos na final da Copa America e ajudou o Brasil a conquistar o título, levando o jornal espanhol "Marca" a elogiá-la como "juventude eterna"'
-        />
-        <CardNoticia
-          image={fotoLieke}
-          title="Lieke Martens"
-          text="Ex-melhor do mundo anuncia sua aposentadoria aos 32 anos"
-        />
-        <CardNoticia
-          image={fotoChampionsLeague}
-          title="Champions League Feminina"
-          text="Champions League Feminina 2025/26: Real Madrid fica muito perto da fase de liga"
-        />
+        {news.map((n) => (
+          <CardNoticia
+            key={n.id}
+            image={n.image}
+            title={n.title}
+            subtitle={n.subtitle}
+          />
+        ))}
       </div>
     </section>
   );

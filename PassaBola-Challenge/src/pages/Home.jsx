@@ -8,13 +8,11 @@ import Patrocinadores from "../componentes/Patrocinadores";
 export default function Home() {
   return (
     <>
-      <div className="mb-20">
         <CarrosselHomeInicio />
         <Noticias />
         <Jogos />
         <SobreNos />
         <Patrocinadores />
-      </div>
       <Footer />
     </>
   );

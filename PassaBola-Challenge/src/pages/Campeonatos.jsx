@@ -2,8 +2,6 @@ import CampeonatosAtuais from "../componentes/componentesCampeonatos/Campeonatos
 
 export default function Campeonatos() {
   return (
-    <div className="my-20">
-      <CampeonatosAtuais />
-    </div>
+    <CampeonatosAtuais />
   );
 }
