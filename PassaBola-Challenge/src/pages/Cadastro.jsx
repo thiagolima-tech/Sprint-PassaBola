@@ -1,20 +1,24 @@
 import InfoUsers from "../componentes/InfoUsers";
 import Acesso from "../componentes/Acesso";
-import InfoUsers from "../componentes/InfoUsers";
-import Acesso from "../componentes/Acesso";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Cadastro() {
   const [nome, setNome] = useState("");
   const [atleta, setAtleta] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const navigate = useNavigate()
 
-  function handleNewProfile(nome, atleta, email, senha) {
+  function handleNewProfile(nome, atleta, email, senha, route) {
     const profile = {"nome":nome,"atleta":atleta,"email":email,"senha":senha}
-    localStorage.setItem('profiles', JSON.stringify(profile))
+    const profiles = localStorage.getItem('profiles') ? JSON.parse(localStorage.getItem('profiles')) : []
+    profiles.push(profile)
+    
+    localStorage.setItem('profiles', JSON.stringify(profiles))
+    navigate(route)
   }
 
   return (
@@ -34,8 +38,7 @@ export default function Cadastro() {
           <InfoUsers campo="Email" type="input" change={(e) => setEmail(e.target.value)}/>
           <InfoUsers campo="Senha" type="input" change={(e) => setSenha(e.target.value)}/>
         </div>
-        <Acesso btn1="LOGIN" route1="/login" btn2="CADASTRAR" route2="/" />
-        <Acesso btn1="LOGIN" route1="/login" btn2="CADASTRAR" route2="/" />
+        <Acesso btn1="LOGIN" route1="/login" btn2="CADASTRAR" handle={() => handleNewProfile(nome, atleta, email, senha, "/login")}/>
       </div>
     </div>
   );
