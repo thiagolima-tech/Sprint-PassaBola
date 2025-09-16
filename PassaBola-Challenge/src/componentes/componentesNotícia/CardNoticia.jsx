@@ -1,6 +1,6 @@
-export default function CardNoticia({ image, title, text }) {
+export default function CardNoticia({ image, title, subtitle }) {
     return (
-        <div className="shrink-0 w-60 md:w-96 first:ml-0 ml-1">
+        <div className="shrink-0 w-60 md:w-96 first:ml-3">
             <div className="rounded-sm overflow-hidden"> {/* impede “vazamento” do scale */}
                 <img
                     src={image}
@@ -9,7 +9,7 @@ export default function CardNoticia({ image, title, text }) {
                 />
             </div>
             <h3 className="font-Jockey text-[#300B74] text-[30px]">{title}</h3>
-            <p className="font-Raleway text-[#4D4D4E] text-[15px]">{text}</p>
+            <p className="font-Raleway text-[#4D4D4E] text-[15px]">{subtitle}</p>
         </div>
     );
 }
