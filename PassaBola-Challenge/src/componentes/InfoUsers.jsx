@@ -1,4 +1,4 @@
-export default function ({ campo, type }) {
+export default function InfoUsers({ campo, type }) {
   return (
     <div className="flex flex-col gap-2">
       <h3 className="font-Jockey text-[#300B74] text-[25px] md:text-[23px]">
