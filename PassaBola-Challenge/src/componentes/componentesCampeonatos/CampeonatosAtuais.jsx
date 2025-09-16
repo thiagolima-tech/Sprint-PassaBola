@@ -1,7 +1,7 @@
 import anuncio from "../../assets/imagemAnuncioCopa.png";
-import CardNoticia from "../componentesNotícia/CardNoticia";
-import DocumentosCopa from "./DocumentosCopa";
-import Titulo from "../Titulo";
+import CardNoticia from "../componentesNotícia/CardNoticia.jsx";
+import DocumentosCopa from "./DocumentosCopa.jsx";
+import Titulo from "../Titulo.jsx";
 import { useEffect, useState } from "react";
 
 export default function CampeonatosAtuais() {

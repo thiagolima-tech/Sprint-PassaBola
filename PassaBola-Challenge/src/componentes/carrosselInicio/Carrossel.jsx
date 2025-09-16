@@ -1,5 +1,5 @@
-import Header from "./HeaderHome";
-import TituloSubtitulo from "./TituloSubtitulo";
+import Header from "./HeaderHome.jsx";
+import TituloSubtitulo from "./TituloSubtitulo.jsx";
 import { useState } from "react";
 
 export default function Carrossel({ imagem, titulo, subtitulo }) {

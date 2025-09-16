@@ -1,8 +1,8 @@
 import copasVerde from "../assets/copas-verde.png";
-import TabelaHead from "../componentes/TableGames/TabelaHead";
-import TabelaBody from "../componentes/TableGames/TabelaBody";
-import DocumentosCopa from "../componentes/componentesCampeonatos/DocumentosCopa";
-import Patrocinadores from "../componentes/Patrocinadores";
+import TabelaHead from "../componentes/TableGames/TabelaHead.jsx";
+import TabelaBody from "../componentes/TableGames/TabelaBody.jsx";
+import DocumentosCopa from "../componentes/componentesCampeonatos/DocumentosCopa.jsx";
+import Patrocinadores from "../componentes/Patrocinadores.jsx";
 
 export default function Jogos() {
   const times = [

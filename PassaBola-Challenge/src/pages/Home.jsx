@@ -1,9 +1,9 @@
-import CarrosselHomeInicio from "../componentes/carrosselInicio/CarrosselHomeInicio";
-import Jogos from "../componentes/componentesJogos/Jogos";
-import Noticias from "../componentes/componentesNotícia/Noticias";
-import SobreNos from "../componentes/componentesSobreNos/SobreNos";
-import Footer from "../componentes/Footer";
-import Patrocinadores from "../componentes/Patrocinadores";
+import CarrosselHomeInicio from "../componentes/carrosselInicio/CarrosselHomeInicio.jsx";
+import Jogos from "../componentes/componentesJogos/Jogos.jsx";
+import Noticias from "../componentes/componentesNotícia/Noticias.jsx";
+import SobreNos from "../componentes/componentesSobreNos/SobreNos.jsx";
+import Footer from "../componentes/Footer.jsx";
+import Patrocinadores from "../componentes/Patrocinadores.jsx";
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
-import CardAtleta from "../componentes/componentesAtletas/CardAtleta";
-import Titulo from "../componentes/Titulo";
+import CardAtleta from "../componentes/componentesAtletas/CardAtleta.jsx";
+import Titulo from "../componentes/Titulo.jsx";
 import fotoJogadora from "../assets/imagemjogadora.png"
 import fotoJogadora2 from "../assets/imagemjogadora2.jpg"
 import fotoJogadora3 from "../assets/imagemjogadora3.jpg"

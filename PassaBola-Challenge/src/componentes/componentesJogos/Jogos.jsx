@@ -1,8 +1,8 @@
-import Titulo from "../Titulo";
+import Titulo from "../Titulo.jsx";
 import jogo1 from "../../assets/TimeAxTimeB.png"
 import jogo2 from "../../assets/TimeCxTimeD.png"
 import jogo3 from "../../assets/TimeExTimeF.png"
-import CardJogos from "./CardJogos";
+import CardJogos from "./CardJogos.jsx";
 
 export default function Jogos() {
     return (

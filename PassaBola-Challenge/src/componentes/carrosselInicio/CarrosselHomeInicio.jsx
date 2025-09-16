@@ -1,4 +1,4 @@
-import Carrossel from "./Carrossel";
+import Carrossel from "./Carrossel.jsx";
 import campo from "../../assets/ImagemCampoFutebol.png";
 
 export default function CarrosselHomeInicio() {

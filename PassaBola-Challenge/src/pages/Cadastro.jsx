@@ -1,5 +1,5 @@
-import InfoUsers from "../componentes/InfoUsers";
-import Acesso from "../componentes/Acesso";
+import InfoUsers from "../componentes/InfoUsers.jsx";
+import Acesso from "../componentes/Acesso.jsx";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState } from "react";

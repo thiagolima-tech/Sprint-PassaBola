@@ -1,4 +1,4 @@
-import Titulo from "./Titulo";
+import Titulo from "./Titulo.jsx";
 import logoAdidas from "../assets/adidas.png";
 import logoGE from "../assets/ge.png";
 import logoBrasa from "../assets/brasa.png";

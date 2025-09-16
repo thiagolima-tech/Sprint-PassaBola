@@ -1,5 +1,5 @@
-import Titulo from "../Titulo";
-import CardNoticia from "./CardNoticia";
+import Titulo from "../Titulo.jsx";
+import CardNoticia from "./CardNoticia.jsx";
 import { useEffect, useState } from "react";
 
 

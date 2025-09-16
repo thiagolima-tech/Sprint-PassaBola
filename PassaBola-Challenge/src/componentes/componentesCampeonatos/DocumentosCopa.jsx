@@ -1,5 +1,5 @@
-import BtnDocs from "./BtnDocs";
-import Titulo from "../Titulo";
+import BtnDocs from "./BtnDocs.jsx";
+import Titulo from "../Titulo.jsx";
 
 export default function DocumentosCopa() {
   return (
