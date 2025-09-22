@@ -28,13 +28,13 @@ export default function Noticias() {
 
     return (
         <>
-            <section className="h-100 bg-white my-10">
+            <section className="bg-white my-10">
                 <Titulo
                     title="Notícias"
                     position="start"
                     color="#300B74"
                 />
-                <div className="flex overflow-x-auto gap-6 px-4 no-scroll">
+                <div className="flex flex-wrap justify-around">
                     {news.map((n) => (
                         <CardNoticia
                             key={n.id}

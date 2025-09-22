@@ -1,6 +1,6 @@
 export default function CardNoticia({ image, title, subtitle }) {
     return (
-        <div className="shrink-0 w-60 md:w-96 first:ml-3">
+        <div className="w-60 md:w-96 my-3 md:my-5">
             <div className="rounded-sm overflow-hidden"> {/* impede “vazamento” do scale */}
                 <img
                     src={image}
