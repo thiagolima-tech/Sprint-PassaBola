@@ -1,4 +1,4 @@
-import anuncio from "../../assets/imagemAnuncioCopa.png";
+import imagemAnuncioCopa from "../../assets/imagemAnuncioCopa.png";
 import CardNoticia from "../componentesNotícia/CardNoticia.jsx";
 import DocumentosCopa from "./DocumentosCopa.jsx";
 import Titulo from "../Titulo.jsx";
@@ -32,7 +32,7 @@ export default function CampeonatosAtuais() {
       <Titulo title="Campeonatos Atuais" position="start" color="#300B74" />
       <div className="px-10 flex justify-center">
         <img
-          src={anuncio}
+          src={imagemAnuncioCopa}
           className="m-10 rounded-sm md:w-[70%] cursor-pointer"
           alt="Anuncio Copa Passa a Bola"
         />
