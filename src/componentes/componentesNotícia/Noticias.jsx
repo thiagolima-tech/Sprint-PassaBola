@@ -34,7 +34,7 @@ export default function Noticias() {
                     position="start"
                     color="#300B74"
                 />
-                <div className="flex flex-wrap justify-around">
+                <div className="flex flex-wrap justify-around gap-4">
                     {news.map((n) => (
                         <CardNoticia
                             key={n.id}
