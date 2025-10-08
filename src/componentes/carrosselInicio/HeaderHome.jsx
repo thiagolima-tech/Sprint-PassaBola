@@ -40,6 +40,7 @@ export default function HeaderHome({ menuAberto, setMenuAberto }) {
         if (userFound.nome === 'Admin') { setUser(true) }
         else { setUser(false) }
         setIsLoginOpen(false);   // <<< fecha o modal aqui
+        setMenuAberto(!menuAberto)
       }
     } else {
       alert("Usuário não encontrado. Verifique e-mail/senha ou cadastre-se.");
@@ -63,8 +64,6 @@ export default function HeaderHome({ menuAberto, setMenuAberto }) {
           {/* Ícone do usuário (abre modal) no mobile */}
           <div
             className={`absolute md:hidden left-25 top-11 z-10
-                      text-2xl text-white rounded-full p-2 bg-gray-400
-                      cursor-pointer transition-transform duration-300 hover:scale-105
                       ${menuAberto ? "opacity-100" : "opacity-0"}`}
           >
             <Modal
@@ -129,9 +128,7 @@ export default function HeaderHome({ menuAberto, setMenuAberto }) {
         </div>
 
         <div
-          className="hidden md:block md:absolute md:right-10 md:top-14 z-10
-                   text-2xl text-white rounded-full p-3 bg-gray-500
-                   cursor-pointer transition-transform duration-300 hover:scale-105"
+          className="hidden md:block"
         >
           <Modal
             open={isLoginOpen}

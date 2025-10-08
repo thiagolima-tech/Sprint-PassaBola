@@ -11,7 +11,7 @@ export default function Modal({ open, onOpenChange, email, senha, onEmail, onSen
       <DialogTrigger asChild>
         <button
           type="button"
-          className="text-4xl text-white rounded-full p-2 bg-gray-500 transition-transform hover:scale-105"
+          className="md:absolute md:right-10 md:top-14 z-10 text-2xl text-white rounded-full p-3 bg-gray-500 cursor-pointer transition-transform duration-300 hover:scale-105"
           aria-label="Abrir login"
         >
           <IoPersonSharp aria-hidden />
