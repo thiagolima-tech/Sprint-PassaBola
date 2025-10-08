@@ -2,23 +2,31 @@ import InfoUsers from "../componentes/InfoUsers";
 import Acesso from "../componentes/Acesso";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, createContext } from "react";
+
+export const UserContext = createContext();
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [user, setUser] = useState(null)
   const navigate = useNavigate();
 
   const handleLogin = (email, senha) => {
     const storedData = localStorage.getItem('profiles');
     const profiles = storedData ? JSON.parse(storedData) : [];
 
-    const userFound = profiles.find(
+    let userFound = profiles.find(
       (profile) => profile.email === email && profile.senha === senha
     );
-    console.log(userFound)
+    
+    if (email === 'admin' && senha === 'admin'){
+      userFound = { nome: "Admin", email: "admin" };
+    }
     if (userFound) {
-      if (confirm(`Você é mesmo ${userFound.nome.toUpperCase()}?`)){
+      if (confirm(`Você é mesmo ${userFound.nome}?`)){
+        if (userFound.nome === 'Admin'){setUser(true)}
+        else {setUser(false)}
       navigate('/');} 
     } else {
       alert('Não encontrado')
@@ -26,6 +34,7 @@ export default function Login() {
   };
 
   return (
+    <UserContext.Provider value={user}>
     <div className="min-h-screen flex items-center justify-center bg-[linear-gradient(to_bottom,#300B74_38%,#5A15DA_100%)] md:bg-[url('./mosaic-bg.png')] bg-cover bg-center md:bg-cover md:bg-center">
       <div className="flex flex-col p-10 gap-10 mx-4 my-20 bg-[#F9F9F9] rounded-4xl h-[759px] md:w-6xl md:h-[759px] md:items-center">
         <Link to="/" className="flex self-start">
@@ -52,5 +61,7 @@ export default function Login() {
         <Acesso btn1="CADASTRAR" route1="/cadastro" btn2="ACESSAR" handle={() => handleLogin(email, senha)} />
       </div>
     </div>
+    {console.log(user)}
+    </UserContext.Provider>
   );
 }

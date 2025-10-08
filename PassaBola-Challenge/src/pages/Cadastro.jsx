@@ -2,7 +2,7 @@ import InfoUsers from "../componentes/InfoUsers";
 import Acesso from "../componentes/Acesso";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Cadastro() {
@@ -20,6 +20,8 @@ export default function Cadastro() {
     localStorage.setItem('profiles', JSON.stringify(profiles))
     navigate(route)
   }
+
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[linear-gradient(to_bottom,#300B74_38%,#5A15DA_100%)] md:bg-[url('./mosaic-bg.png')] bg-cover bg-center md:bg-cover md:bg-center">

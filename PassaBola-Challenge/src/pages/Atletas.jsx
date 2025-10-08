@@ -1,9 +1,9 @@
 import CardAtleta from "../componentes/componentesAtletas/CardAtleta";
 import Titulo from "../componentes/Titulo";
-import fotoJogadora from "../assets/imagemjogadora.png"
-import fotoJogadora2 from "../assets/imagemjogadora2.jpg"
-import fotoJogadora3 from "../assets/imagemjogadora3.jpg"
-import fotoJogadora4 from "../assets/imagemjogadora4.jpg"
+import fotoJogadora from "../assets/imagemJogadora.png"
+import fotoJogadora2 from "../assets/imagemJogadora2.jpg"
+import fotoJogadora3 from "../assets/imagemJogadora3.jpg"
+import fotoJogadora4 from "../assets/imagemJogadora4.jpg"
 
 export default function Atletas() {
 
