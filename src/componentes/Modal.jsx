@@ -1,50 +1,59 @@
-import { Button } from "@/components/ui/button"
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+// Modal.jsx
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription, DialogFooter, DialogClose } from "@/componentes/ui/dialog";
+import { Button } from "@/componentes/ui/button";
+import { Input } from "@/componentes/ui/input";
+import { Label } from "@/componentes/ui/label";
+import { IoPersonSharp } from "react-icons/io5";
 
-export function Modal() {
+export default function Modal({ open, onOpenChange, email, senha, onEmail, onSenha, onSubmit }) {
   return (
-    <Dialog>
-      <form>
-        <DialogTrigger asChild>
-          <Button variant="outline">Open Dialog</Button>
-        </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px]">
-          <DialogHeader>
-            <DialogTitle>Edit profile</DialogTitle>
-            <DialogDescription>
-              Make changes to your profile here. Click save when you&apos;re
-              done.
-            </DialogDescription>
-          </DialogHeader>
-          <div className="grid gap-4">
-            <div className="grid gap-3">
-              <Label htmlFor="name-1">Name</Label>
-              <Input id="name-1" name="name" defaultValue="Pedro Duarte" />
-            </div>
-            <div className="grid gap-3">
-              <Label htmlFor="username-1">Username</Label>
-              <Input id="username-1" name="username" defaultValue="@peduarte" />
-            </div>
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogTrigger asChild>
+        <button
+          type="button"
+          className="text-4xl text-white rounded-full p-2 bg-gray-500 transition-transform hover:scale-105"
+          aria-label="Abrir login"
+        >
+          <IoPersonSharp aria-hidden />
+        </button>
+      </DialogTrigger>
+
+      <DialogContent className="sm:max-w-[420px]">
+        <DialogHeader>
+          <DialogTitle>Entrar</DialogTitle>
+          <DialogDescription>Acesse sua conta para continuar.</DialogDescription>
+        </DialogHeader>
+
+        <form className="grid gap-4" onSubmit={onSubmit}>
+          <div className="grid gap-2">
+            <Label htmlFor="email">E-mail</Label>
+            <Input id="email" type="email" value={email} onChange={(e) => onEmail(e.target.value)} required />
           </div>
-          <DialogFooter>
+          <div className="grid gap-2">
+            <Label htmlFor="password">Senha</Label>
+            <Input id="password" type="password" value={senha} onChange={(e) => onSenha(e.target.value)} required />
+          </div>
+          <DialogFooter className="mt-2">
             <DialogClose asChild>
-              <Button variant="outline">Cancel</Button>
+              <Button type="button" variant="outline">Cancelar</Button>
             </DialogClose>
-            <Button type="submit">Save changes</Button>
+            <Button type="submit">Entrar</Button>
           </DialogFooter>
-        </DialogContent>
-      </form>
+        </form>
+        <div className="relative my-2">
+          <div className="h-px w-full bg-muted" />
+        </div>
+
+        <div className="text-center text-sm">
+          Não tem uma conta?{" "}
+          <a
+            href="/cadastro"
+            className="font-medium underline underline-offset-4 hover:opacity-80"
+          >
+            Cadastre-se
+          </a>
+        </div>
+      </DialogContent>
     </Dialog>
-  )
+  );
 }
