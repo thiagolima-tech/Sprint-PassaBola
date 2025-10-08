@@ -1,4 +1,4 @@
-import CarrosselHomeInicio from "../componentes/carrosselInicio/CarrosselHomeInicio.jsx";
+import Carrossel from "../componentes/carrosselInicio/Carrossel.jsx";
 import Jogos from "../componentes/componentesJogos/Jogos.jsx";
 import Noticias from "../componentes/componentesNotícia/Noticias.jsx";
 import SobreNos from "../componentes/componentesSobreNos/SobreNos.jsx";
@@ -8,7 +8,7 @@ import Patrocinadores from "../componentes/Patrocinadores.jsx";
 export default function Home() {
   return (
     <>
-        <CarrosselHomeInicio />
+        <Carrossel />
         <Noticias />
         <Jogos />
         <SobreNos />
