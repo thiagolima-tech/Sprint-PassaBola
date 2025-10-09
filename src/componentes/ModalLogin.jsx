@@ -21,7 +21,7 @@ export default function ModalLogin({ open, onOpenChange, email, senha, onEmail, 
       <DialogContent className="sm:max-w-[420px]">
         <DialogHeader>
           <DialogTitle>Entrar</DialogTitle>
-          <DialogDescription>Acesse sua conta para continuar.</DialogDescription>
+          <DialogDescription>Acesse o seu login para continuar.</DialogDescription>
         </DialogHeader>
 
         <form className="grid gap-4" onSubmit={onSubmit}>
@@ -37,7 +37,7 @@ export default function ModalLogin({ open, onOpenChange, email, senha, onEmail, 
             <DialogClose asChild>
               <Button type="button" variant="outline">Cancelar</Button>
             </DialogClose>
-            <Button type="submit">Entrar</Button>
+            <Button type="submit" className="bg-[#300B74] duration-300 hover:bg-[#220854] hover:scale-105">Entrar</Button>
           </DialogFooter>
         </form>
         <div className="relative my-2">
@@ -48,7 +48,7 @@ export default function ModalLogin({ open, onOpenChange, email, senha, onEmail, 
           Não tem uma conta?{" "}
           <a
             href="/cadastro"
-            className="font-medium underline underline-offset-4 hover:opacity-80"
+            className="text-[#300B74] font-medium underline underline-offset-4 hover:opacity-80"
           >
             Cadastre-se
           </a>
