@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logotipo from "../../assets/Logotipo-PassaBola-Branco.png";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
-import Modal from "../Modal";
+import ModalLogin from "../ModalLogin";
 import { createContext, useState } from "react";
 
 
@@ -39,7 +39,7 @@ export default function HeaderHome({ menuAberto, setMenuAberto }) {
       if (confirm(`Você é mesmo ${userFound.nome.toUpperCase()}?`)) {
         if (userFound.nome === 'Admin') { setUser(true) }
         else { setUser(false) }
-        setIsLoginOpen(false);   // <<< fecha o modal aqui
+        setIsLoginOpen(false);   // <<< fecha o ModalLogin aqui
         setMenuAberto(!menuAberto)
       }
     } else {
@@ -61,12 +61,12 @@ export default function HeaderHome({ menuAberto, setMenuAberto }) {
             {menuAberto ? <IoMdClose size={46} /> : <IoMdMenu size={46} />}
           </button>
 
-          {/* Ícone do usuário (abre modal) no mobile */}
+          {/* Ícone do usuário (abre ModalLogin) no mobile */}
           <div
-            className={`absolute md:hidden left-25 top-11 z-10
+            className={`absolute md:hidden left-26 top-11 z-10
                       ${menuAberto ? "opacity-100" : "opacity-0"}`}
           >
-            <Modal
+            <ModalLogin
               open={isLoginOpen}
               onOpenChange={setIsLoginOpen}
               email={email}
@@ -78,7 +78,7 @@ export default function HeaderHome({ menuAberto, setMenuAberto }) {
           </div>
         </div>
 
-        {/* Offcanvas menu mobile */}
+  
         <div
           className={`absolute md:hidden top-0 left-0 w-full h-screen bg-[#561EBD] flex flex-col items-center gap-6 text-2xl uppercase transform transition-transform ${menuAberto ? "opacity-100" : "opacity-0"
             }`}
@@ -98,16 +98,16 @@ export default function HeaderHome({ menuAberto, setMenuAberto }) {
           </div>
         </div>
 
-        {/* Logo */}
+        
         <Link to="/">
           <img
             src={logotipo}
             alt="Logotipo Passa Bola"
-            className="w-18 top-10 sm:w-24 right-10 sm:top-8 cursor-pointer hover:scale-105 duration-300 absolute md:left-16 md:top-10"
+            className="w-18 top-6 sm:w-24 right-6 sm:top-8 cursor-pointer hover:scale-105 duration-300 absolute md:left-16 md:top-10"
           />
         </Link>
 
-        {/* NAV Desktop */}
+        
         <div className="absolute top-10 ml-45 sm:left-8">
           <nav
             className="hidden font-Jockey uppercase sm:text-[25px] md:flex items-center gap-12"
@@ -130,7 +130,7 @@ export default function HeaderHome({ menuAberto, setMenuAberto }) {
         <div
           className="hidden md:block"
         >
-          <Modal
+          <ModalLogin
             open={isLoginOpen}
             onOpenChange={setIsLoginOpen}
             email={email}

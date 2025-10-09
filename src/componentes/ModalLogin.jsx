@@ -5,13 +5,13 @@ import { Input } from "@/componentes/ui/input";
 import { Label } from "@/componentes/ui/label";
 import { IoPersonSharp } from "react-icons/io5";
 
-export default function Modal({ open, onOpenChange, email, senha, onEmail, onSenha, onSubmit }) {
+export default function ModalLogin({ open, onOpenChange, email, senha, onEmail, onSenha, onSubmit }) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>
         <button
           type="button"
-          className="md:absolute md:right-10 md:top-14 z-10 text-2xl text-white rounded-full p-3 bg-gray-500 cursor-pointer transition-transform duration-300 hover:scale-105"
+          className="md:absolute md:right-10 md:top-10 z-10 text-2xl text-white rounded-full p-2 bg-gray-500/80 cursor-pointer transition-transform duration-300 hover:scale-105"
           aria-label="Abrir login"
         >
           <IoPersonSharp aria-hidden />
